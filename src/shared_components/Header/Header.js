@@ -34,7 +34,7 @@ export default function Header({ loggedIn }) {
     return (
         <div className='Header'>
             <button className="Header-logo-button" onClick={handleLogoClick}>
-                <h2>News AI</h2>
+                <h2>Insight.AI</h2>
             </button>
             {
                 loggedIn ? 
