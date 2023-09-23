@@ -3,14 +3,24 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'; // Import Link from 'react-router-dom'
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 import {
     Typography, 
     CssBaseline,
     Avatar,
-    Container
+    Container, 
+    styled
   } from '@mui/material';
-import theme from '../../theme'; // Import your custom theme
+
+  const CustomButton = styled(Button)({
+      backgroundColor: '#673ab7',
+      color: 'white',
+      '&:hover': {
+        backgroundColor: '#8561c5' ,
+        color: 'white'
+      },
+      borderRadius: '30px'
+  })
 
 
 export default function LoginPage() {
@@ -37,7 +47,7 @@ export default function LoginPage() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Avatar style={{ margin: 8, backgroundColor: '#8A2BE2' }}>
-          <LockOutlinedIcon />
+          <MenuBookIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
           Welcome Back
@@ -63,13 +73,13 @@ export default function LoginPage() {
           value={password}
           onChange={handlePasswordChange}
         />
-        <Button variant="contained" onClick={handleLogin} style={{ width: '290px' }}>
+        <CustomButton variant="contained" onClick={handleLogin} style={{ width: '290px' }}>
           Login
-        </Button>
+        </CustomButton>
         </form>
         <p>
         Don't have an account?{' '}
-        <Link to="/sign-up" style={{ textDecoration: 'underline', cursor: 'pointer' }}>
+        <Link to="/sign-up" style={{ color: 'rgb(0, 122, 255)' }}>
           Sign Up
         </Link>
       </p>
