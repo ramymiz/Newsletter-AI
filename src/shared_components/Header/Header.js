@@ -13,6 +13,10 @@ export default function Header({ loggedIn }) {
         navigate('/preferences');
     }
 
+    const handleSignUpClick = () => {
+        navigate('/sign-up');
+    }
+
     return (
         <div className='Header'>
             <button className="Header-logo-button" onClick={handleLogoClick}>
@@ -21,11 +25,11 @@ export default function Header({ loggedIn }) {
             {
                 loggedIn ? 
                 <button className="Header-preferences-button" onClick={handlePreferencesClick}>
-                    <h3>Preferences</h3>
+                    <h4>Preferences</h4>
                 </button>
                 :
-                <button className="Header-signup-button">
-                    <h3>Sign up</h3>
+                <button className="Header-signup-button" onClick={handleSignUpClick}>
+                    <p className="Header-signup-button-content">Sign up</p>
                 </button>
             }
         </div>
