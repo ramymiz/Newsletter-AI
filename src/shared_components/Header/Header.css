@@ -2,4 +2,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.Header-logo-button {
+    all: unset;
+}
+
+.Header-logo-button:hover {
+    cursor: pointer;
+}
+
+.Header-preferences-button {
+    all: unset;
+    color: #565656;
+}
+
+.Header-preferences-button:hover {
+    color: black;
+    cursor: pointer;
 }
