@@ -1,11 +1,10 @@
 import React from 'react';
-import { Chip, Container, Typography } from '@mui/material';
+import { Chip, Container, Typography, Box } from '@mui/material';
 
 const interests = {
   Student: ['Computer Science', 'Math', 'Physics'],
   Tech: ['Software Engineer', 'Hardware Engineer', 'Algorithm Design'],
   Finance: ['Investment Banking', 'Private Equity'],
-  Consulting: ['Mangement Consulting', 'Tech Consulting', 'Sustainability Consulting']
 };
 
 const ProfessionalInterests = ({ selectedRoles, selectedInterests, onSelectInterest }) => {
@@ -18,18 +17,20 @@ const ProfessionalInterests = ({ selectedRoles, selectedInterests, onSelectInter
 
   return (
     <Container>
-      <Typography variant="h4">Professional Interests</Typography>
-      <div>
-        {availableInterests.map((interest) => (
-          <Chip
-            key={interest}
-            label={interest}
-            clickable
-            color={selectedInterests.includes(interest) ? 'primary' : 'default'}
-            onClick={() => handleClick(interest)}
-          />
-        ))}
-      </div>
+      <Box display="flex" flexDirection="column" alignItems="center" spacing={2} margin="0 auto" maxWidth="60%">
+        <Typography variant="h4" gutterBottom>Professional Interests</Typography>
+        <Box display="flex" gap={1} flexWrap="wrap" justifyContent="center">
+          {availableInterests.map((interest) => (
+            <Chip
+              key={interest}
+              label={interest}
+              clickable
+              color={selectedInterests.includes(interest) ? 'primary' : 'default'}
+              onClick={() => handleClick(interest)}
+            />
+          ))}
+        </Box>
+      </Box>
     </Container>
   );
 };
