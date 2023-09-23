@@ -4,6 +4,14 @@ import TextField from '@mui/material/TextField';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'; // Import Link from 'react-router-dom'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import {
+    Typography, 
+    CssBaseline,
+    Avatar,
+    Container
+  } from '@mui/material';
+import theme from '../../theme'; // Import your custom theme
+
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -28,13 +36,16 @@ export default function LoginPage() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <LockOutlinedIcon />
-
-      <h2>Welcome Back</h2>
+        <Avatar style={{ margin: 8, backgroundColor: '#8A2BE2' }}>
+          <LockOutlinedIcon />
+        </Avatar>
+        <Typography component="h1" variant="h5">
+          Welcome Back
+        </Typography>
       <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <TextField
           id="outlined-Username-input"
-          label="Username"
+          label="Username *"
           type="Username"
           autoComplete="current-Username"
           variant="outlined"
@@ -44,7 +55,7 @@ export default function LoginPage() {
         />
         <TextField
           id="outlined-password-input"
-          label="Password"
+          label="Password *"
           type="password"
           autoComplete="current-password"
           variant="outlined"
@@ -52,7 +63,7 @@ export default function LoginPage() {
           value={password}
           onChange={handlePasswordChange}
         />
-        <Button color='primary'variant="contained" onClick={handleLogin} style={{ width: '290px' }}>
+        <Button color='loginButton'variant="contained" onClick={handleLogin} style={{ width: '290px' }}>
           Login
         </Button>
         </form>
