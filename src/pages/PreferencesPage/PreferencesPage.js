@@ -12,7 +12,7 @@ const CustomButton = styled(Button)({
       color: 'white'
     },
     borderRadius: '30px'
-})
+});
 
 export default function PreferencesPage() {
   const [selectedRoles, setSelectedRoles] = useState([]);
@@ -28,12 +28,14 @@ export default function PreferencesPage() {
   return (
     <div>
       {!showInterests ? (
-        <>
+        <Box display="flex" flexDirection="column" alignItems="center" maxWidth="60%" margin="0 auto">
           <RoleSelection selectedRoles={selectedRoles} onSelectRole={setSelectedRoles} />
-          <CustomButton variant="contained" color="primary" onClick={handleContinue}>
-            Continue
-          </CustomButton>
-        </>
+          <Box display="flex" justifyContent="flex-end" width="100%">
+            <CustomButton variant="contained" color="primary" onClick={handleContinue}>
+              Continue
+            </CustomButton>
+          </Box>
+        </Box>
       ) : (
         <ProfessionalInterests
           selectedRoles={selectedRoles}
