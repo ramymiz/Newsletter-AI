@@ -28,20 +28,18 @@ export default function SignUpPage() {
   };
 
   return (
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
       <div style={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
       }}>
-        <Avatar style={{ margin: 8, backgroundColor: '#f50057' }}>
+        <Avatar style={{ margin: 8, backgroundColor: '#8A2BE2' }}>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
           Sign Up
         </Typography>
-        <form style={{ width: '100%', marginTop: 8 }} onSubmit={handleSubmit}>
+        <form style={{ display:'flex', flexDirection: 'Column' ,width: '100%', marginTop: 8 ,alignItems:'center'}} onSubmit={handleSubmit}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -54,6 +52,7 @@ export default function SignUpPage() {
             autoFocus
             value={formData.email}
             onChange={handleChange}
+            style={{width:'300px'}}
           />
           <TextField
             variant="outlined"
@@ -67,6 +66,8 @@ export default function SignUpPage() {
             autoComplete="current-password"
             value={formData.password}
             onChange={handleChange}
+            style={{width:'300px'}}
+
           />
           <TextField
             variant="outlined"
@@ -79,6 +80,8 @@ export default function SignUpPage() {
             id="confirmPassword"
             value={formData.confirmPassword}
             onChange={handleChange}
+            style={{width:'300px'}}
+
           />
           <Button
             type="submit"
@@ -86,11 +89,12 @@ export default function SignUpPage() {
             variant="contained"
             color="primary"
             style={{ margin: '24px 0 16px' }}
+            style={{width:'300px'}}
+
           >
             Sign Up
           </Button>
         </form>
       </div>
-    </Container>
   );
 }
