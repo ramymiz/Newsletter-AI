@@ -1,6 +1,20 @@
 import './Header.css';
 import { useNavigate, useOutletContext } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material';
 
+const PurpleButton = styled(Button)({
+    backgroundColor: '#673ab7',
+    fontWeight: 'bold',
+    textTransform: 'none',
+    fontSize: '16px',
+    color: 'white',
+    '&:hover': {
+        backgroundColor: '#8561c5',
+        color: 'white'
+    },
+    borderRadius: '30px'
+})
 
 export default function Header({ loggedIn }) {
     const navigate = useNavigate();
@@ -28,9 +42,7 @@ export default function Header({ loggedIn }) {
                     <h4>Preferences</h4>
                 </button>
                 :
-                <button className="Header-signup-button" onClick={handleSignUpClick}>
-                    <p className="Header-signup-button-content">Sign up</p>
-                </button>
+                <PurpleButton style={{width: '100px'}}>Sign up</PurpleButton>
             }
         </div>
     )

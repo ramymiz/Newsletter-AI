@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom'; // Import Link from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import {
     Typography, 
@@ -14,6 +14,9 @@ import {
 
   const CustomButton = styled(Button)({
       backgroundColor: '#673ab7',
+      fontWeight: 'bold',
+      textTransform: 'none',
+      fontSize: '16px',
       color: 'white',
       '&:hover': {
         backgroundColor: '#8561c5' ,
@@ -49,9 +52,7 @@ export default function LoginPage() {
         <Avatar style={{ margin: 8, backgroundColor: '#8A2BE2' }}>
           <MenuBookIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
-          Welcome Back
-        </Typography>
+        <h2 style={{ marginTop: '10px', marginBottom: '5px'}}>Welcome back!</h2>
       <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop:'16px'}}>
         <TextField
           id="outlined-Username-input"
