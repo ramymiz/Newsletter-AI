@@ -63,7 +63,7 @@ export default function LoginPage() {
           value={password}
           onChange={handlePasswordChange}
         />
-        <Button color='loginButton'variant="contained" onClick={handleLogin} style={{ width: '290px' }}>
+        <Button variant="contained" onClick={handleLogin} style={{ width: '290px' }}>
           Login
         </Button>
         </form>
