@@ -42,10 +42,10 @@ export default function LoginPage() {
         <Typography component="h1" variant="h5">
           Welcome Back
         </Typography>
-      <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop:'16px'}}>
         <TextField
           id="outlined-Username-input"
-          label="Username *"
+          label="Email *"
           type="Username"
           autoComplete="current-Username"
           variant="outlined"
