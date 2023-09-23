@@ -20,7 +20,7 @@ const RoleSelection = ({ selectedRoles, onSelectRole }) => {
               key={role}
               label={role}
               clickable
-              color={selectedRoles.includes(role) ? 'primary' : 'default'}
+              style={selectedRoles.includes(role) ? { backgroundColor: '#8561c5', color: 'white' } : {}}
               onClick={() => handleClick(role)}
             />
           ))}

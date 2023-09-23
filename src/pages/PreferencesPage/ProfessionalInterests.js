@@ -25,7 +25,7 @@ const ProfessionalInterests = ({ selectedRoles, selectedInterests, onSelectInter
               key={interest}
               label={interest}
               clickable
-              color={selectedInterests.includes(interest) ? 'primary' : 'default'}
+              style={selectedInterests.includes(interest) ? { backgroundColor: '#8561c5', color: 'white' } : {}}
               onClick={() => handleClick(interest)}
             />
           ))}
