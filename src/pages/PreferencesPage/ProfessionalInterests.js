@@ -1,4 +1,5 @@
 import React from 'react';
+import PurpleButton from '../../shared_components/Buttons/PurpleButton';
 import { Chip, Container, Typography, Box } from '@mui/material';
 
 const interests = {
@@ -29,8 +30,8 @@ const ProfessionalInterests = ({ selectedRoles, selectedInterests, onSelectInter
   return (
     <Container>
       <Box display="flex" flexDirection="column" alignItems="center" spacing={2} margin="0 auto" maxWidth="60%">
-        <Typography variant="h4" gutterBottom>What describes your job?</Typography>
-        <Box display="flex" gap={1} flexWrap="wrap" justifyContent="center">
+        <Typography variant="h4" gutterBottom style={{ marginBottom: '20px' }}>Professional Interests</Typography>
+        <Box display="flex" gap={1} flexWrap="wrap" justifyContent="center" marginBottom={2}>
           {availableInterests.map((interest) => (
             <Chip
               key={interest}
@@ -40,6 +41,13 @@ const ProfessionalInterests = ({ selectedRoles, selectedInterests, onSelectInter
               onClick={() => handleClick(interest)}
             />
           ))}
+        </Box>
+        <Box display="flex" justifyContent="center" width="100%" gutterTop style={{ marginTop: '10px' }}>
+          <PurpleButton onClick={() => {
+            // Handle the submit action here, e.g., routing to another page
+          }}>
+            Submit
+          </PurpleButton>
         </Box>
       </Box>
     </Container>

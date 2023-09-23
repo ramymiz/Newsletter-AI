@@ -30,7 +30,7 @@ const RoleSelection = ({ selectedRoles, onSelectRole }) => {
   return (
     <Container>
       <Box display="flex" flexDirection="column" alignItems="center" spacing={2} margin="0 auto" maxWidth="60%">
-        <Typography variant="h4" gutterBottom>What area do you work in?</Typography>
+        <Typography variant="h4" gutterBottom style={{ marginBottom: '20px' }}>What area do you work in?</Typography>
         <Box display="flex" gap={1} flexWrap="wrap" justifyContent="center">
           {roles.map((role) => (
             <Chip
