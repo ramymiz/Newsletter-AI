@@ -3,6 +3,8 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import SimpleButton from './SimpleButton';
 import LoginPage from './pages/LoginPage/LoginPage';
+import Header from './shared_components/Header/Header';
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -15,7 +17,8 @@ function App() {
   }, [count]);
 
   return (
-    <div className="App">
+    <div>
+      <Header />
       <SimpleButton handleClick={handleClick}/>
       <LoginPage /> {/* Render the Login component here */}
 
