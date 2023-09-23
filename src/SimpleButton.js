@@ -1,7 +1,7 @@
-function SimpleButton({ onClick }) {
+function SimpleButton({ handleClick }) {
     return (
         <div>
-            <button onClick={onClick}>Click here</button>
+            <button onClick={handleClick}>Click here</button>
         </div>
     )
 }
