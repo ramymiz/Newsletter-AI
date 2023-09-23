@@ -3,14 +3,9 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import {
-    Typography, 
-    CssBaseline,
-    Avatar,
-    Container, 
-    styled
-  } from '@mui/material';
+import PersonIcon from '@mui/icons-material/Person';
+
+import { Avatar, styled } from '@mui/material';
 
   const CustomButton = styled(Button)({
       backgroundColor: '#673ab7',
@@ -50,7 +45,7 @@ export default function LoginPage() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Avatar style={{ margin: 8, backgroundColor: '#8A2BE2' }}>
-          <MenuBookIcon />
+          <PersonIcon />
         </Avatar>
         <h2 style={{ marginTop: '10px', marginBottom: '5px'}}>Welcome back!</h2>
       <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop:'16px'}}>
