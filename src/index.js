@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import App from './App';
 import ArticlePage from './pages/ArticlePage/ArticlePage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
@@ -21,26 +21,23 @@ const Layout = () => {
 
 const router = createBrowserRouter([
   {
-    element: <Layout />,
+    path: '/',
+    element: <App />,
     children: [
       {
-        path: '/login',
-        element: <LoginPage />
-      },
-      {
-        path: '/sign-up',
+        path: 'sign-up',
         element: <SignUpPage />
       },
       {
-        path: '/articles',
+        path: 'articles',
         element: <ArticlePage />
       },
       {
-        path: '/preferences',
+        path: 'preferences',
         element: <PreferencesPage />
       },
       {
-        path: '/',
+        path: 'login',
         element: <LoginPage />
       },
     ]
