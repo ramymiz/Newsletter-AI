@@ -19,9 +19,6 @@ function App() {
   return (
     <div>
       <Header />
-      <SimpleButton handleClick={handleClick}/>
-      <LoginPage /> {/* Render the Login component here */}
-
     </div>
   );
 }
