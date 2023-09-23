@@ -1,7 +1,8 @@
 import './Header.css';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import { styled } from '@mui/material';
+import { styled, Avatar } from '@mui/material';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 
 const PurpleButton = styled(Button)({
     backgroundColor: '#673ab7',
@@ -34,15 +35,20 @@ export default function Header({ loggedIn }) {
     return (
         <div className='Header'>
             <button className="Header-logo-button" onClick={handleLogoClick}>
-                <h2>Insight.AI</h2>
+                <div style={{display: 'flex', alignItems: 'center'}}>
+                    <Avatar style={{ margin: 8, backgroundColor: '#8A2BE2' }}>
+                        <MenuBookIcon />
+                    </Avatar>
+                    <h2 style={{marginLeft: '6px'}}>insight</h2>
+                </div>
             </button>
             {
-                loggedIn ? 
-                <button className="Header-preferences-button" onClick={handlePreferencesClick}>
-                    <h4>Preferences</h4>
-                </button>
-                :
-                <PurpleButton style={{width: '100px'}}>Sign up</PurpleButton>
+                loggedIn ?
+                    <button className="Header-preferences-button" onClick={handlePreferencesClick}>
+                        <h4>Preferences</h4>
+                    </button>
+                    :
+                    <PurpleButton onClick={handleSignUpClick} style={{ width: '100px' }}>Sign up</PurpleButton>
             }
         </div>
     )
