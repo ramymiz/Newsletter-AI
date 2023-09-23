@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
+import SimpleButton from './SimpleButton';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-
+      <SimpleButton onClick={handleClick}/>
     </div>
   );
 }
