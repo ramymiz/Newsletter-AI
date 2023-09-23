@@ -1,23 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
-import SimpleButton from './SimpleButton';
-import LoginPage from './pages/LoginPage/LoginPage';
+import { Outlet } from 'react-router-dom';
 import Header from './shared_components/Header/Header';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount(count + 1);
-  }   
-
-  const handleCountChange = useEffect(() => {
-    console.log(count);
-  }, [count]);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <div>
+      <Header loggedIn={loggedIn} />
+      <Outlet context={[loggedIn, setLoggedIn]}/>
     </div>
   );
 }
