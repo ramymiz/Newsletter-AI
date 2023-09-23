@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'; // Import Link from 'react-router-dom'
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -27,6 +28,8 @@ export default function LoginPage() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <LockOutlinedIcon />
+
       <h2>Welcome Back</h2>
       <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <TextField
