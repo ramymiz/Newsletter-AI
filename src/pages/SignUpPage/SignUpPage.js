@@ -5,9 +5,20 @@ import {
   Button, 
   CssBaseline,
   Avatar,
-  Container
+  Container,
+  styled
 } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+
+const PurpleButton = styled(Button)({
+    backgroundColor: '#673ab7',
+    color: 'white',
+    '&:hover': {
+      backgroundColor: '#8561c5' ,
+      color: 'white'
+    },
+    borderRadius: '30px'
+})
 
 export default function SignUpPage() {
   const [formData, setFormData] = useState({
@@ -83,17 +94,15 @@ export default function SignUpPage() {
             style={{width:'300px'}}
 
           />
-          <Button
+          <PurpleButton
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
-            style={{ margin: '24px 0 16px' }}
-            style={{width:'300px'}}
-
+            style={{ margin: '24px 0 16px', width: '300px' }}
           >
             Sign Up
-          </Button>
+          </PurpleButton>
         </form>
       </div>
   );
