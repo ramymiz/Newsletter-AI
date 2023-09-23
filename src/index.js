@@ -7,29 +7,44 @@ import ArticlePage from './pages/ArticlePage/ArticlePage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 import PreferencesPage from './pages/PreferencesPage/PreferencesPage';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Header from './shared_components/Header/Header';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+
+const Layout = () => {
+  return (
+    <>
+      <Header />
+      <Outlet />
+    </>
+  )
+}
 
 const router = createBrowserRouter([
   {
-    path: '/login',
-    element: <LoginPage />
-  },
-  {
-    path: '/sign-up',
-    element: <SignUpPage />
-  },
-  {
-    path: '/articles',
-    element: <ArticlePage />
-  },
-  {
-    path: '/preferences',
-    element: <PreferencesPage />
-  },
-  {
-    path: '/',
-    element: <App />
-  },
+    element: <Layout />,
+    children: [
+      {
+        path: '/login',
+        element: <LoginPage />
+      },
+      {
+        path: '/sign-up',
+        element: <SignUpPage />
+      },
+      {
+        path: '/articles',
+        element: <ArticlePage />
+      },
+      {
+        path: '/preferences',
+        element: <PreferencesPage />
+      },
+      {
+        path: '/',
+        element: <LoginPage />
+      },
+    ]
+  }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
