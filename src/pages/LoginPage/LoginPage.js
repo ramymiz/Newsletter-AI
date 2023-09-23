@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Import Link from 'react-router-dom'
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -17,16 +18,16 @@ export default function LoginPage() {
   };
 
   const handleLogin = () => {
-    // Implement your login logic here, e.g., make an API request
-  };
+    navigate('/articles');  };
 
-  const handleSubmit = () => {
-    navigate('/articles');
+  const handleSignUp = () => {
+    navigate('/sign-up');
   };
+  
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h2>Login</h2>
+      <h2>Welcome Back</h2>
       <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <TextField
           id="outlined-Username-input"
@@ -48,10 +49,17 @@ export default function LoginPage() {
           value={password}
           onChange={handlePasswordChange}
         />
-        <Button variant="outlined" onClick={handleSubmit} style={{ width: '300px' }}>
-          Submit
+        <Button color='primary'variant="contained" onClick={handleLogin} style={{ width: '290px' }}>
+          Login
         </Button>
-      </form>
+        </form>
+        <p>
+        Don't have an account?{' '}
+        <Link to="/sign-up" style={{ textDecoration: 'underline', cursor: 'pointer' }}>
+          Sign Up
+        </Link>
+      </p>
+      
     </div>
   );
 }
