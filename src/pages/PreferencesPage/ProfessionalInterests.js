@@ -1,6 +1,7 @@
 import React from 'react';
 import PurpleButton from '../../shared_components/Buttons/PurpleButton';
 import { Chip, Container, Typography, Box } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const interests = {
     Student: ['Computer Science', 'Math', 'Physics', 'Biology', 'History', 'Economics', 'Psychology', 'Art', 'Music'],
@@ -27,6 +28,12 @@ const ProfessionalInterests = ({ selectedRoles, selectedInterests, onSelectInter
     );
   };
 
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    navigate('/articles');
+  };
+
   return (
     <Container>
       <Box display="flex" flexDirection="column" alignItems="center" spacing={2} margin="0 auto" maxWidth="60%">
@@ -43,9 +50,7 @@ const ProfessionalInterests = ({ selectedRoles, selectedInterests, onSelectInter
           ))}
         </Box>
         <Box display="flex" justifyContent="center" width="100%" gutterTop style={{ marginTop: '10px' }}>
-          <PurpleButton onClick={() => {
-            // Handle the submit action here, e.g., routing to another page
-          }}>
+          <PurpleButton onClick={handleSubmit}>
             Submit
           </PurpleButton>
         </Box>
