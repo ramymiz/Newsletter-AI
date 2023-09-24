@@ -17,6 +17,17 @@ export default function Article({ article }) {
     return (
         <div>
             <div className="Article" onClick={handleOpen}>
+            <div 
+    style={{ 
+        width: '100%', 
+        height: '13vh',
+        backgroundImage: `url(${article.image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        marginBottom: '20px' 
+    }}
+></div>
                 <h3 style={{marginTop: '10px', marginBottom: '-5px'}}>{article.title}</h3>
                 <p style={{fontSize: '0.9rem', color: '#BCBCBC'}}>{twoSentenceSummary}</p>     
 
@@ -56,18 +67,19 @@ export default function Article({ article }) {
                     </IconButton>
 
                     {/* Displaying the image */}
-                    <img 
-                        src={article.image} 
-                        alt={article.title} 
-                        style={{ 
-                            width: '100%', 
-                            maxHeight: '30vh', 
-                            objectFit: 'contain', 
-                            marginBottom: '20px' 
-                        }} 
-                    />
+                    <div 
+    style={{ 
+        width: '100%', 
+        height: '40vh',
+        backgroundImage: `url(${article.image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        marginBottom: '20px' 
+    }}
+></div>
 
-                    <Typography id="article-modal-title" variant="h4" component="h2">
+                    <Typography id="article-modal-title" variant="h4" component="h2"gutterBottom    >
                         {article.title}
                     </Typography>
                     <Typography id="article-modal-description" variant="body1">
