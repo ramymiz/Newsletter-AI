@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Button, Box } from '@mui/material';
-import { styled } from '@mui/system';
+//import { styled } from '@mui/system';
 import RoleSelection from './RoleSelection';
 import ProfessionalInterests from './ProfessionalInterests';
 import PurpleButton from '../../shared_components/Buttons/PurpleButton';
+//import ThumbUpThumbsDown from '../ArticlePage/Components/ThumbsUpDown';
 
 export default function PreferencesPage() {
   const [selectedRoles, setSelectedRoles] = useState([]);
