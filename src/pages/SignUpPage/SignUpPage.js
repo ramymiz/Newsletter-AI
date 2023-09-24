@@ -10,6 +10,8 @@ import {
 } from '@mui/material';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const PurpleButton = styled(Button)({
     backgroundColor: '#673ab7',
@@ -25,6 +27,8 @@ const PurpleButton = styled(Button)({
 })
 
 export default function SignUpPage() {
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         email: '',
         password: '',
@@ -41,6 +45,10 @@ export default function SignUpPage() {
         // Here you would typically validate the form data and send it to your backend
         console.log(formData);
     };
+
+    const handleSignUp = () => {
+        navigate('/preferences');
+      };
 
     return (
         <div style={{
@@ -94,6 +102,7 @@ export default function SignUpPage() {
 
                 />
                 <PurpleButton
+                    onClick = {handleSignUp}
                     type="submit"
                     fullWidth
                     variant="contained"

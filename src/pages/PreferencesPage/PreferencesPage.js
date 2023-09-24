@@ -21,7 +21,7 @@ export default function PreferencesPage() {
       {!showInterests ? (
         <Box display="flex" flexDirection="column" alignItems="center" maxWidth="60%" margin="0 auto">
           <RoleSelection selectedRoles={selectedRoles} onSelectRole={setSelectedRoles} />
-          <Box display="flex" justifyContent="flex-end" width="100%">
+          <Box display="flex" justifyContent="center" width="100%" gutterTop style={{ marginTop: '20px' }}>
             <PurpleButton variant="contained" color="primary" onClick={handleContinue}>
               Continue
             </PurpleButton>
