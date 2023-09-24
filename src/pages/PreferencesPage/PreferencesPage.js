@@ -5,6 +5,7 @@ import RoleSelection from './RoleSelection';
 import ProfessionalInterests from './ProfessionalInterests';
 import PurpleButton from '../../shared_components/Buttons/PurpleButton';
 import ThumbUpThumbsDown from '../ArticlePage/components/ThumbsUpDown';
+import { useOutletContext } from 'react-router-dom';
 
 export default function PreferencesPage() {
   const [selectedRoles, setSelectedRoles] = useState([]);

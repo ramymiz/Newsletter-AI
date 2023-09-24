@@ -9,7 +9,7 @@ import {
     styled
 } from '@mui/material';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -28,6 +28,8 @@ const PurpleButton = styled(Button)({
 
 export default function SignUpPage() {
     const navigate = useNavigate();
+    const [loggedIn, setLoggedIn, setOnSignInPage] = useOutletContext();
+    setOnSignInPage(true);
 
     const [formData, setFormData] = useState({
         email: '',
@@ -48,6 +50,8 @@ export default function SignUpPage() {
 
     const handleSignUp = () => {
         navigate('/preferences');
+        setLoggedIn(true);
+        setOnSignInPage(false);
       };
 
     return (

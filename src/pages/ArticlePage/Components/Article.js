@@ -14,7 +14,7 @@ export default function Article({ article }) {
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const twoSentenceSummary = article.summary.split('. ').slice(0, 2).join('. ') + '...';
+    const twoSentenceSummary = article.summary
 
     return (
         <div>
@@ -77,8 +77,8 @@ export default function Article({ article }) {
                     </h2>
                     <p style={{ color: '#BCBCBC', marginTop: '-15px' }}>{article.creator}</p>
                     <ArticleTags tags={article.tags} maxTagLength={70}/>
-                    <p>
-                        {article.summary}
+                    <p style={{ color: '#BCBCBC'}}>
+                        {article.bigSummary}
                     </p>
                     <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <p><a className="modal-anchor" href={article.url} target="_blank">View original article</a></p>

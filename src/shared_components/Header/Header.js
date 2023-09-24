@@ -17,7 +17,7 @@ const PurpleButton = styled(Button)({
     borderRadius: '30px'
 })
 
-export default function Header({ loggedIn, setLoggedIn }) {
+export default function Header({ loggedIn, setLoggedIn, onSignInPage, setUseArticle2 }) {
     const navigate = useNavigate();
 
     const handleLogoClick = () => {
@@ -28,6 +28,7 @@ export default function Header({ loggedIn, setLoggedIn }) {
     const handleLogout = () => {
         navigate('/login');
         setLoggedIn(false);
+        setUseArticle2(false);
     }
 
     const handleSignUpClick = () => {
@@ -50,7 +51,9 @@ export default function Header({ loggedIn, setLoggedIn }) {
                         <h3>Logout</h3>
                     </button>
                     :
-                    <PurpleButton onClick={handleSignUpClick} style={{ width: '100px' }}>Sign up</PurpleButton>
+                    
+                        !onSignInPage && <PurpleButton onClick={handleSignUpClick} style={{ width: '100px' }}>Sign up</PurpleButton>
+                    
             }
         </div>
     )
