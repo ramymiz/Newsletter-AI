@@ -29,10 +29,8 @@ export default function Article({ article }) {
     }}
 ></div>
                 <h3 style={{marginTop: '10px', marginBottom: '-5px'}}>{article.title}</h3>
-                <p style={{fontSize: '0.9rem', color: '#BCBCBC'}}>{twoSentenceSummary}</p>     
-
+                <p style={{fontSize: '0.9rem', color: '#BCBCBC'}}>{twoSentenceSummary}</p>  
             </div>
-
             <Modal
                 open={open}
                 onClose={handleClose}
