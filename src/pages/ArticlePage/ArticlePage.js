@@ -68,7 +68,59 @@ const articles1 = [
     tags: ["Data Science", "Computer Science"]
   }];
 
-const articles2 = [
+const articles2 = [{
+  title: "UK Returns to EU Science and Space Initiatives Post-Brexit",
+  creator: "Engadget",
+  summary: "The UK is set to rejoin EU's Horizon and Copernicus programs after Brexit's exit. This 'bespoke deal' excludes the UK's participation in Euratom, emphasizing on its nuclear fusion research.",
+  bigSummary: "Following Brexit, the UK had to exit various essential European Union science programs like the Galileo satnav project and Horizon. Recent developments indicate that the UK will now rejoin the Horizon as an associate country based on a unique agreement made between UK Prime Minister Rishi Sunak and European Commission President Ursula von der Leyen. Additionally, the UK will associate with Copernicus, the EU's £8 billion Earth observation satellite initiative. This return does not include the Euratom nuclear research, with the UK leaning towards its nuclear fusion projects. As per the agreement, the UK will annually contribute almost €2.6 billion for participating in both Horizon and Copernicus. Both leaders from the UK and the EU see this as a significant strategic partnership and an indicator of their continued commitment to global scientific research and collaboration. Scientists in the UK have expressed their relief, emphasizing the importance of international collaboration in science. Initially, the UK was barred from Horizon due to a disagreement concerning the Northern Ireland Brexit trading agreement. The return deal was established in February 2023, with some disputes regarding the UK's financial contribution. One of Horizon Europe's primary objectives is to address climate change, support the UN's Sustainable Development Goals, and amplify the EU's competitiveness and growth.",
+  image: 'https://s.yimg.com/ny/api/res/1.2/_q6_uzNOhMU86Wg6b8cm_Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2023-08/94aec6f0-4e26-11ee-bbf7-7e7ca192712e',
+  url: 'https://www.wired.com/story/fast-forward-tesla-dojo-supercomputer-elon-musk-ai-revolution/',
+  tags: ["Sustainable Development", "Environmental Law"]
+},
+{
+  title: "Is the U.N.'s 2030 Sustainable Development Plan a Failure?",
+  creator: "NPR",
+  summary: "Despite setbacks, the U.N. reassesses its Sustainable Development Goals (SDGs) at their midway point. Global challenges have slowed progress, but there's debate on whether the approach or ambition is to blame.",
+  bigSummary: "In 2015, the UN set 17 Sustainable Development Goals (SDGs) for 2030, addressing global issues like poverty, education, and climate change. Yet, recent data shows that half of these goals have seen limited progress due to challenges like the COVID-19 pandemic, political conflicts, and climate disasters. Currently, 50% of 140 targets lag, with 30% stagnating or regressing. If unchecked, by 2030, millions will face extreme poverty, malnutrition, and a lack of education. Despite setbacks, there've been achievements like reduced child mortality. Leaders like U.N. Secretary General Antonio Guterres advocate for enhanced funding, emphasizing commitment. While some critique the SDGs' ambition, others highlight the importance of global accountability and unity.",
+  image: 'https://media.npr.org/assets/img/2023/09/21/un-sustainablegoals-graphic_wide-8d3308b2e77ef1f560e6602fad0e0dd701004a0c-s1400-c100.jpg',
+  tags: ["Sustainable Development", "Environmental Policy"],
+  url: "https://incolumitas.com/pages/BotOrNot/"
+},
+{
+  title: "Cautious Optimism Arises from Climate Week Developments",
+  creator: "Insider",
+  summary: "Despite past disappointments, Climate Week shows hints of progress with stricter participation criteria and a focus on action over rhetoric. Yet, concerns over the sincerity of commitments linger.",
+  bigSummary: "Climate Week often showcases global leaders' climate commitments, but with emissions still rising post-2015 Paris Agreement, doubts persist. By 2023, 929 companies pledged net-zero emissions, though many lack tangible plans. Notably, U.N. Secretary-General Guterres tightened participation criteria, sidelining top polluters like the US and China. Colombia and Panama aim to limit coal usage, and Brazil seeks tougher emissions targets. California's Gov. Newsom criticized fossil fuels, and UAE's Sultan Al Jaber, despite potential COP28 role conflicts, recognized the need to reduce them. Prominent city and state leaders, especially women, are becoming central in the climate conversation, directly confronting climate challenges and driving solutions.",
+  image: "https://i.insider.com/650dc73a19f33e0019048549?width=1200&format=jpeg",
+  tags: ["Climate Change Mitigation", "Sustainable Development"],
+  url: "https://venturebeat.com/ai/generative-ai-in-production-rethinking-development-and-embracing-best-practices/"
+},
+{
+  title: "Judge Strikes Down Trump-Era Old-Growth Logging Rule",
+  creator: "NPR",
+  summary: "A Trump-era rule allowing logging of old-growth forests in the Pacific Northwest has been ruled unlawful. The judge found it in violation of multiple environmental laws.",
+  bigSummary: "A Trump-era rule allowing old-growth forest logging in the Pacific Northwest violates multiple laws, determined by U.S. Magistrate Judge Andrew Hallman. This 2021 rule, which changed a 1994 protection, was contested by environmental groups. Hallman urged the Forest Service to re-evaluate its environmental assessment and produce a full environmental impact statement. The rule, covering an area the size of Maryland, intended to enhance forest resilience to wildfires. However, a lawsuit argued this could increase fire severity and underlined large trees' importance for biodiversity and climate. Oregon Wild's Rob Klavins called for the Biden administration to reverse this rule, referencing Biden's commitment to tree preservation.",
+  image: "https://media.npr.org/assets/img/2023/08/31/ap23244070218899_wide-ea2f53956e95198e1d3adc9ae2a3bedc03b625ca-s1400-c100.jpg",
+  tags: ["Environmental Law", "Environmental Policy"],
+  url: "https://www.engadget.com/caesars-reportedly-paid-millions-to-stop-hackers-releasing-its-data-081052820.html"
+}, {
+  title: "Utility Monopoly vs. Deregulated Energy: A Deep Dive",
+  summary: "Understanding the difference between regulated and deregulated utility markets has direct implications for electricity costs and delivery. Both models present their own sets of advantages and drawbacks.",
+  bigSummary: "In a regulated utility market, a singular utility company is responsible for both the supply and delivery of power, supervised by state governments. It offers consumers simplicity but may come with rate fluctuations. On the other hand, deregulated utility markets decouple supply from delivery, allowing consumers to choose their power supplier while the delivery remains constant. Deregulation promises competitive pricing, diverse contract setups, and renewable energy options. However, it may be riddled with transparency issues and higher rates in practice. Historically, deregulated energy markets emerged post the 1978 federal policy, a reaction to the 1973 oil crisis, giving states the autonomy to choose their energy structure. The results have varied across states.",
+  image: "https://www.cnet.com/a/img/resize/91c32d0773b69244a03235359bbdc4a8fd95a1e3/hub/2023/06/16/93020120-1541-4321-b9fe-e09971ba6a7d/artboard-4-copy3x.png?auto=webp&fit=crop&height=675&width=1200",
+  creator: "CNET",
+  tags: ["Natural Gas Distribution", "Environmental Policy"],
+  url: "https://www.cnet.com/home/energy-and-utilities/utility-monopoly-vs-deregulated-energy-which-is-better-for-you/"
+},
+{
+  title: "The Rise of Massive IoT: Powering Tomorrow with LoRaWAN",
+  creator: "ReadWrite",
+  summary: "The emergence of the 'Massive IoT' era, characterized by vast sensor deployments, promises transformative business operations. LoRaWAN's features, like cost-efficiency and scalability, make it a prime choice for managing this IoT expansion.",
+  bigSummary: "The 'Massive IoT' age is upon us, marked by a surge in sensors and devices. This growth offers novel ways to run businesses and tackle global issues previously unthinkable. The key to IoT's efficient function at this magnitude is the development of Low Power Wide Area Networks (LPWANs), essential for managing vast sensor deployments. Leading the LPWAN solutions is LoRaWAN, celebrated for its affordability, long-range capabilities, and open design. This technology is now operational in over 76,000 cities globally. Illustrating its value, IoT, powered by LPWANs like LoRaWAN, is revolutionizing public safety, conserving resources, and offering unprecedented benefits. Examples include monitoring air quality in smart buildings, detecting natural gas leaks, and smart water metering to conserve dwindling water resources.",
+  image: "https://readwrite.com/wp-content/uploads/2023/07/Reshaping-Business-and-Society.jpg",
+  tags: ["Climate Change Mitigation"],
+  url: "https://readwrite.com/how-lorawan-and-massive-iot-are-reshaping-business-and-society/"
+}
 
 ]
 
