@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Button, Box } from '@mui/material';
-//import { styled } from '@mui/system';
+import { styled } from '@mui/system';
 import RoleSelection from './RoleSelection';
 import ProfessionalInterests from './ProfessionalInterests';
 import PurpleButton from '../../shared_components/Buttons/PurpleButton';
-//import ThumbUpThumbsDown from '../ArticlePage/Components/ThumbsUpDown';
+import ThumbUpThumbsDown from '../ArticlePage/components/ThumbsUpDown';
 
 export default function PreferencesPage() {
   const [selectedRoles, setSelectedRoles] = useState([]);
@@ -20,7 +20,7 @@ export default function PreferencesPage() {
   return (
     <div>
       {!showInterests ? (
-        <Box display="flex" flexDirection="column" alignItems="center" maxWidth="60%" margin="0 auto">
+        <Box display="flex" flexDirection="column" alignItems="center" maxWidth="65%" margin="0 auto">
           <RoleSelection selectedRoles={selectedRoles} onSelectRole={setSelectedRoles} />
           <Box display="flex" justifyContent="center" width="100%" gutterTop style={{ marginTop: '20px' }}>
             <PurpleButton variant="contained" color="primary" onClick={handleContinue}>
