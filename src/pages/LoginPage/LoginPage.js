@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useOutletContext } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import PersonIcon from '@mui/icons-material/Person';
 
@@ -23,6 +23,9 @@ import { Avatar, styled } from '@mui/material';
 
 export default function LoginPage() {
   const navigate = useNavigate();
+
+  const setLoggedIn = useOutletContext()[1];
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -35,7 +38,10 @@ export default function LoginPage() {
   };
 
   const handleLogin = () => {
-    navigate('/articles');  };
+    navigate('/articles');
+    setLoggedIn(true);  
+  };
+
 
   const handleSignUp = () => {
     navigate('/sign-up');

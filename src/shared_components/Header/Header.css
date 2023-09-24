@@ -16,11 +16,10 @@
 
 .Header-preferences-button {
     all: unset;
-    color: #565656;
 }
 
 .Header-preferences-button:hover {
-    color: black;
+    color: rgb(130, 130, 130);
     cursor: pointer;
 }
 

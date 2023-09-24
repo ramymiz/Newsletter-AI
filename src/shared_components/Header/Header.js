@@ -17,15 +17,17 @@ const PurpleButton = styled(Button)({
     borderRadius: '30px'
 })
 
-export default function Header({ loggedIn }) {
+export default function Header({ loggedIn, setLoggedIn }) {
     const navigate = useNavigate();
 
     const handleLogoClick = () => {
         navigate('/login');
+        setLoggedIn(false);
     }
 
-    const handlePreferencesClick = () => {
-        navigate('/preferences');
+    const handleLogout = () => {
+        navigate('/login');
+        setLoggedIn(false);
     }
 
     const handleSignUpClick = () => {
@@ -44,8 +46,8 @@ export default function Header({ loggedIn }) {
             </button>
             {
                 loggedIn ?
-                    <button className="Header-preferences-button" onClick={handlePreferencesClick}>
-                        <h4>Preferences</h4>
+                    <button className="Header-preferences-button" onClick={handleLogout}>
+                        <h3>Logout</h3>
                     </button>
                     :
                     <PurpleButton onClick={handleSignUpClick} style={{ width: '100px' }}>Sign up</PurpleButton>

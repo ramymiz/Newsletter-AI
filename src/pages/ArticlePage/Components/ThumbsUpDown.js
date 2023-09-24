@@ -31,7 +31,7 @@ const FeedbackButtons = () => {
             backgroundColor: thumbsUpSelected ? '#363C39' : 'transparent', 
             marginRight: '10px'}}
         >
-          <ThumbUpIcon />
+          <ThumbUpIcon fontSize='small'/>
         </Button>
         <Button 
           onClick={handleThumbsDown} 
@@ -39,7 +39,7 @@ const FeedbackButtons = () => {
             color: thumbsDownSelected ? '#CC6666' : '#CC6666', // Softer off-white and red
             backgroundColor: thumbsDownSelected ? '#363C39' : 'transparent'}}
         >
-          <ThumbDownIcon />
+          <ThumbDownIcon fontSize='small'/>
         </Button>
       </Box>
     </Box>

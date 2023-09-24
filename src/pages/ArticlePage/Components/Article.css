@@ -7,9 +7,20 @@
     transition: 0.3s; /* transition for smooth effects */
     padding: 10px; /* just for better visualization */
     cursor: pointer; /* changes the cursor to hand when hovered */
+    position: relative;
 }
 .Article:hover {
     /* styles you want to apply when the div is hovered over */
     background-color: #673ab7; /* this is just an example, you can use any color */
     transform: scale(1.05); /* this enlarges the div slightly */
+}
+
+.modal-anchor {
+    color: rgb(54, 75, 233);
+    text-decoration: underline; 
+}
+
+.modal-anchor:hover {
+    cursor: pointer;
+    
 }

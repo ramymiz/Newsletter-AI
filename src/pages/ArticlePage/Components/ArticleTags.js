@@ -44,7 +44,7 @@ const tagColorMapping = {
     }
 }
 
-export default function ArticleTags({ tags }) {
+export default function ArticleTags({ tags, maxTagLength }) {
     const [newTags, setNewTags] = useState(tags);
 
     
@@ -53,7 +53,7 @@ export default function ArticleTags({ tags }) {
         let endingTagIndx = 0;
 
         for (const tag of tags) {
-            if (tagChars + tag.length > 40) {
+            if (tagChars + tag.length > maxTagLength) {
                 break;
             } else {
                 tagChars += tag.length;
@@ -71,7 +71,7 @@ export default function ArticleTags({ tags }) {
                     <p style={{
                         fontSize: '0.8rem',
                         padding: '3px 5px 3px 5px',
-                        margin: '4px',
+                        margin: '4px 6px 4px 0',
                         borderRadius: '4px',
                         fontWeight: 'bold',
                         width: 'fit-content',

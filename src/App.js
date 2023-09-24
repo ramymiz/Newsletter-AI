@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={theme}>
-        <Header loggedIn={loggedIn} />
+        <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
         <Outlet context={[loggedIn, setLoggedIn]}/>
       </ThemeProvider>      
     </div>
