@@ -1,0 +1,14 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    width: 95vw;
+}
+
+.grid-item {
+    background-color: #232323;
+    border-radius: 20px;
+    max-width: 30vw;
+    height: 200px;
+    padding: 10px;
+}
