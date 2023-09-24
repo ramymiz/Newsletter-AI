@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom';
 import Header from './shared_components/Header/Header';
 import theme from './theme.js';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import ArticleTags from './pages/ArticlePage/components/ArticleTags';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
