@@ -3,6 +3,8 @@ import './Article.css';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function Article({ article }) {
     const [open, setOpen] = useState(false);
@@ -39,6 +41,19 @@ export default function Article({ article }) {
                         borderRadius:'5px'
                     }}
                 >
+                    {/* Close button */}
+                    <IconButton 
+                        aria-label="close" 
+                        onClick={handleClose} 
+                        sx={{ 
+                            position: 'absolute', 
+                            top: 8, 
+                            right: 8 
+                        }} 
+                    >
+                        <CloseIcon />
+                    </IconButton>
+
                     {/* Displaying the image */}
                     <img 
                         src={article.image} 
