@@ -55,8 +55,10 @@ function ArticlePage() {
   return (
     <div>
       <div>
-        <h1 style={{ textAlign: 'center' }}>Your tailored six articles:</h1>
-        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <Typography style={{ textAlign: 'center' }}variant="h4"marginBottom="0rem">Your tailored six articles:</Typography>
+        <Typography variant="subtitle1" align="center" color="textSecondary" marginBottom="2rem">
+          Each day, we curate six articles based on your career and professional interests. Dive in and stay updated with the latest trends and developments relevant to you.
+        </Typography>        <div style={{display: 'flex', justifyContent: 'center'}}>
           <div className="grid-container">
             {articles.map((article, index) => (
               <Article article={article}/>

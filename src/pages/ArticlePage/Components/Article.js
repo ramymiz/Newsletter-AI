@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import FeedbackButtons from './ThumbsUpDown'; // Update with the actual path to the file
 
 export default function Article({ article }) {
     const [open, setOpen] = useState(false);
@@ -72,6 +73,9 @@ export default function Article({ article }) {
                     <Typography id="article-modal-description" variant="body1">
                         {article.summary}
                     </Typography>
+                    <Box mt={2}> 
+            <FeedbackButtons />
+        </Box>
                 </Box>
             </Modal>
         </div>
