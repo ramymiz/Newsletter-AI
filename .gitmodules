@@ -1,0 +1,3 @@
+[submodule "submodule_directory"]
+	path = submodule_directory
+	url = https://github.com/kbghub56/hackRice_backend.git
