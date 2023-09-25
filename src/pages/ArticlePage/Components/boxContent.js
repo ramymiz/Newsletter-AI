@@ -33,6 +33,7 @@ export default function Article({ title, summary, image }) {
                 objectFit: 'cover',
                 borderRadius: '6px',
                 marginRight: '16px'
+                
               }}
             />
             <Box flex={1}>
